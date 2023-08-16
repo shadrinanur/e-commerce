@@ -24,48 +24,157 @@
 <!-- Jumbotron -->
 
     <!--produk 1-->
-    <div class="grid grid-cols-3 gap-4">
-  <img
-    data-te-animation-init
-    data-te-animation-start="onScroll"
-    data-te-animation="[fade-in_1s_ease-in-out]"
-    src="../assets/baju1.jpg"
-    class="rounded" />
-  <img
-    data-te-animation-init
-    data-te-animation-start="onScroll"
-    data-te-animation="[fade-in_1s_ease-in-out]"
-    data-te-animation-delay="300"
-    src="../assets/model3.jpg"
-    class="rounded" />
-  <img
-    data-te-animation-init
-    data-te-animation-start="onScroll"
-    data-te-animation="[fade-in_1s_ease-in-out]"
-    data-te-animation-delay="500"
-    src="../assets/baju1.jpg"
-    class="rounded" />
-  <img
-    data-te-animation-init
-    data-te-animation-start="onScroll"
-    data-te-animation="[fade-in_1s_ease-in-out]"
-    src="../assets/c1.jpg"
-    class="rounded" />
-  <img
-    data-te-animation-init
-    data-te-animation-start="onScroll"
-    data-te-animation="[fade-in_1s_ease-in-out]"
-    data-te-animation-delay="300"
-    src="../assets/model.jpg"
-    class="rounded" />
-  <img
-    data-te-animation-init
-    data-te-animation-start="onScroll"
-    data-te-animation="[fade-in_1s_ease-in-out]"
-    data-te-animation-delay="500"
-    src="../assets/c2.jpg"
-    class="rounded" />
+    <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="sr-only">Products</h2>
+
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="/singleproduct" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/hoodie.png" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">V Neck Hoodie</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$68.900</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/produk6.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Plain Shorts</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$43.500</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/produk2.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Sweater</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$76.000</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/produk3.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Sweater</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$78.000</p>
+      </a>
+
+      <!-- More products... -->
+    </div>
+  </div>
 </div>
+
+<center>
+  <div
+  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+  >
+</div>
+<div
+  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-secondary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+  >
+</div>
+<div
+  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-success motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+  >
+</div>
+<div
+  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-danger motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+  >
+</div>
+<div
+  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-warning motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+  >
+</div>
+<div
+  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-info motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+  >
+</div>
+<div
+  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-neutral-100 motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+  >
+</div>
+</center>
+
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="sr-only">Products</h2>
+
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="/singleproduct" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/produk8.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Plain Trousers</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$52.000</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/produk5.webp" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Crop Top Sweaters</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$63.900</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/produk10.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Plain Trousers</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$52.000</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="../assets/produk9.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Crop Top</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$64.000</p>
+      </a>
+
+      <!-- More products... -->
+    </div>
+  </div>
+</div>  
+
 <!--produk1-->
 
 <!--footer-->

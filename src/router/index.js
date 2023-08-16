@@ -3,7 +3,10 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Produk from "../views/Produk.vue";
 import Beranda from "../views/Beranda.vue";
-
+import Contact from "../views/Contact.vue";
+import SingleProduct from "../views/SingleProduct.vue";
+import Checkout from "../views/Checkout.vue";
+import Cart from  "../views/Cart.vue";
 const routes = [ 
     {
         path: "/login",
@@ -24,6 +27,26 @@ const routes = [
         path: "/beranda",
         name: "Beranda",
         component: Beranda,
+    },
+    {
+        path: "/contact",
+        name: "Contact",
+        component: Contact,
+    },
+    {
+        path: "/singleproduct",
+        name: "SingleProduct",
+        component: SingleProduct,
+    },
+    {
+        path: "/checkout",
+        name: "Checkout",
+        component: Checkout,
+    },
+    {
+        path: "/cart",
+        name: "Cart",
+        component: Cart,
     },
 ];
 

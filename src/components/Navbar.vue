@@ -3,7 +3,7 @@
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="" class="flex items-center">
           <img src="../assets/logoshop.png" class="h-20 mr-3" alt="" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> `shadcandiez`</span>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> `Scandiez`</span>
       </a>
       <div class="flex md:order-2">
         <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1" >
@@ -45,8 +45,11 @@
           <a href="/produk" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
         </li> 
         <li>
-          <a href="/beranda" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Produk</a>
+          <a href="/beranda" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Product</a>
         </li> 
+        <li>
+          <a href="/contact" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Contact</a>
+        </li>
         </ul>
         </div>
       </div>
