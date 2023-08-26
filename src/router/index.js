@@ -8,7 +8,8 @@ import Checkout from "../views/Checkout.vue";
 import Cart from  "../views/Cart.vue";
 import Merk from "../views/Merk.vue";
 import Kategori from "../views/Kategori.vue";
-import SingleProduk from "../views/SingleProduk.vue";
+//import SingleProduk from "../views/SingleProduk.vue";
+import SingleProduct from "../views/SingleProduct.vue";
 import Profile from "../views/Profile.vue";
 
 const routes = [ 
@@ -63,10 +64,9 @@ const routes = [
         component: Kategori,
     },
     {
-        path: "/produk/:slug",
-        name: "SingleProduk",
-        component: SingleProduk,
-        props: true
+        path: "/singleproduct",
+        name: "SingleProduct",
+        component: SingleProduct,
     },
     {
         path: "/profile",

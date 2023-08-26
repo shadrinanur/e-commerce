@@ -2,7 +2,7 @@
   <div v-if="getProduk == undefined">Loading....</div>
   <div v-else>
   <div class="grid md:grid-cols-3 gap-8  mt-10 pl-5">
-      <div  v-for="produk in getProduk.data" :key="produk.slug">
+      <div  v-for="produk in getProduk" :key="produk.slug">
 
       <div class="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-gray shadow-md">
           <a href="#">
@@ -56,7 +56,7 @@
                   </p>
               </div>
               <div>
-                  <router-link :to="{ name: 'SingleProduk', params: { slug: produk.slug } }" class="flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 mt-5">
+                  <router-link :to="{ name: 'SingleProduct', params: { slug: produk.slug } }" class="flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 mt-5">
                       <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
                           stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round"
@@ -78,12 +78,12 @@
   import { mapGetters, mapActions } from 'vuex';
   export default {
   computed: {
-  ...mapGetters('produk', ['getProduk']),
+  ...mapGetters('product', ['getProduk']),
   },
   methods: {
-  ...mapActions('produk', ['fetchProduk']),
+  ...mapActions('product', ['fetchProduk']),
   },
-  created() {
+  mounted() {
   this.fetchProduk();
   },
   }

@@ -1,9 +1,10 @@
 import { createStore } from "vuex";
 import auth from "./modules/auth";
 import merk from "./modules/merk";
-import produk from "./modules/produk";
+import product from "./modules/product";
 import kategori from "./modules/kategori";
 import user from "./modules/user";
+import cart from "./modules/cart";
 
 const store = createStore({
     state: {
@@ -12,9 +13,10 @@ const store = createStore({
     modules: {
         auth,
         merk,
-        produk,
+        product,
         kategori,
         user,
+        cart,
    },
 });
 
