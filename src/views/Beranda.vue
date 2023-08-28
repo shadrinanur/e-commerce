@@ -1,5 +1,4 @@
 <template>
-   
    <div class="h-screen lg:flex">
   <div class="ml-auto lg:w-9/12 xl:w-7/12">
     <div class="mb-20 mt-40 px-4 sm:max-w-xl md:max-w-full md:px-24 lg:ml-auto lg:max-w-screen-md lg:px-8">

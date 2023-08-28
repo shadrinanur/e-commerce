@@ -120,6 +120,23 @@
               </div>
               <div class="mb-4">
                 <label
+                  for="address"
+                  class="mb-2 inline-block text-xs font-medium uppercase text-gray-700"
+                  >Address</label
+                >
+                <input
+                  v-model="address"
+                  type="text"
+                  class="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow"
+                  id="address"
+                  name="address-address"
+                  placeholder="Enter your address "
+                  autofocus=""
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label
                   for="email"
                   class="mb-2 inline-block text-xs font-medium uppercase text-gray-700"
                   >Email</label

@@ -5,13 +5,13 @@ const auth = {
   state: {
     token: localStorage.getItem("token") || "",
     loginError: null,
-    user: JSON.stringify(localStorage.getItem("user") || null),
-  
+    // user: JSON.stringify(localStorage.getItem("user") || null),
+    dataAddress: []
   },
   getters: {
     isAuthenticated: (state) => !!state.token, 
     getUser: (state) => state.user,
-    getUserAddress: (state) => state.userAddress,
+    getAddress: (state) => state.dataAddress,
   },
   actions: {
     async login({ commit }, credentials) {
@@ -35,7 +35,21 @@ const auth = {
         return false;
       }
     },
+
+  
+    // //address
+    // async address({commit}, credentials) {
+    //   try {
+    //     const response = await axios.post(
+    //       "https://ecommerce.olipiskandar.com/api/v1/checkout/get-shipping-cost/{address_id}",
+    //       credentials
+    //     );
+    //     const token = response.data.access_token;
+    //     const address = response.data.address;
+    //   }
+    // },
      //register
+    
      async register({ commit }, credentials) {
       try {
           const response = await axios.post(
@@ -81,20 +95,21 @@ const auth = {
     }
    },
 
-   async getUserAddress({ state }) {
+   async getUserAddress({ state, commit }) {
     try { 
       const response = await axios.get(
         "https://ecommerce.olipiskandar.com/api/v1/user/addresses",
   {
     headers: {
-      Authorization: `Bearer ${state.token}`,
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
   }
 );
-  return true;
+commit('SET_ADDRESS', response.data)
+  return response.data;
   } catch (error) {
     console.error(error);
-    return false;
+    return null;
     }
    },
     

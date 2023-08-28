@@ -8,9 +8,9 @@ import Checkout from "../views/Checkout.vue";
 import Cart from  "../views/Cart.vue";
 import Merk from "../views/Merk.vue";
 import Kategori from "../views/Kategori.vue";
-//import SingleProduk from "../views/SingleProduk.vue";
 import SingleProduct from "../views/SingleProduct.vue";
 import Profile from "../views/Profile.vue";
+import PageOrder from "../views/PageOrder.vue";
 
 const routes = [ 
     {
@@ -43,8 +43,9 @@ const routes = [
     {
         path: "/checkout",
         name: "Checkout",
-        component: Checkout,
-    },
+        component: () => import("../views/Checkout.vue"),
+        meta: { requireLogin: true },
+      },
     {
         path: "/cart",
         name: "Cart",
@@ -73,6 +74,12 @@ const routes = [
         name: "Profile",
         component: Profile,
     },
+    {
+        path: "/order/:orderCode",
+        name: "PageOrder",
+        component: PageOrder,
+        props: true,
+    },
 ];
 
 const router = createRouter({
@@ -80,6 +87,33 @@ const router = createRouter({
     routes,
 });
 
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.requiresGuest && store.getters["auth/isAuthenticated"]) {
+        next("/");
+    } else{
+        next();
+    }
+});
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.requiresLogin && !store.getters["auth/isAuthenticated"]) {
+        next("/login");
+    } else{
+        next();
+    }
+});
+
+function cekToken(to, from, next) {
+    var isAuthenticated = false;
+    if (localStorage.getItem("token")) isAuthenticated = true;
+    else isAuthenticated = false;
+    if (isAuthenticated) {
+      next();
+    } else {
+      next("/login");
+    }
+  }
 
 
 
