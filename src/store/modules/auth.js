@@ -5,13 +5,14 @@ const auth = {
   state: {
     token: localStorage.getItem("token") || "",
     loginError: null,
-    // user: JSON.stringify(localStorage.getItem("user") || null),
-    dataAddress: []
+    user: JSON.stringify(localStorage.getItem("user") || null),
+    userAddress: [],
+    user: [],
   },
   getters: {
     isAuthenticated: (state) => !!state.token, 
     getUser: (state) => state.user,
-    getAddress: (state) => state.dataAddress,
+    gettersUserAddress: (state) => state.userAddress,
   },
   actions: {
     async login({ commit }, credentials) {
@@ -21,34 +22,21 @@ const auth = {
           credentials
         );
         const token = response.data.access_token;
-        const user = response.data.user;
+        // const user = response.data.user;
         // Save token to localStorage
         localStorage.setItem("token", token);
-        localStorage.setItem("user", JSON.stringify(user));
-
         commit("SET_TOKEN", token);
+        commit("SET_LOGIN_ERROR", null);
+        // localStorage.setItem("user", JSON.stringify(user));
         console.log("Token saved:", token);
-
         return true;
       } catch (error) {
+        const errorMessage = error.response.data.message || "Login failed";
+        commit("SET_LOGIN_ERROR", errorMessage);
         console.error(error);
         return false;
       }
-    },
-
-  
-    // //address
-    // async address({commit}, credentials) {
-    //   try {
-    //     const response = await axios.post(
-    //       "https://ecommerce.olipiskandar.com/api/v1/checkout/get-shipping-cost/{address_id}",
-    //       credentials
-    //     );
-    //     const token = response.data.access_token;
-    //     const address = response.data.address;
-    //   }
-    // },
-     //register
+    },  
     
      async register({ commit }, credentials) {
       try {
@@ -130,10 +118,16 @@ commit('SET_ADDRESS', response.data)
     SET_LOGIN_ERROR(state, error) {
       state.loginError = error;
     },
+    SET_REGISTER_ERROR(state, error) {
+      state.registerError = error;
+    },
     SET_USER(state, user) {
       state.user = user;
       // console.log("User data stored in store:", user);
   },
+  SET_ADDRESS(state, address) {
+    state.userAddress = address;
+  }
   },
 };
 

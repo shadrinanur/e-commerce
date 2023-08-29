@@ -17,13 +17,13 @@ const routes = [
         path: "/login",
         name: "Login",
         component: Login,
-        meta: { requiresGuest: true },
+        meta: { requirevGuest: true },
     },
     {
         path: "/register",
         name: "Register",
         component: Register,
-        meta: { requiresGuest: true },
+        meta: { requireGuest: true },
     },
     {
         path: "/produk",

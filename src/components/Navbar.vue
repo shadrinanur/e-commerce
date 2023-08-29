@@ -3,7 +3,7 @@
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="" class="flex items-center">
           <img src="../assets/logoshop.png" class="h-20 mr-3" alt="" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> shadrina</span>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> Scandiez</span>
       </a>
       <div class="flex md:order-2">
         <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1" >
@@ -62,16 +62,16 @@
           <router-link :to="{ name: 'Beranda'}" type="button">Home</router-link> 
         </li> 
         <li>
-          <router-link :to="{ name: 'Produk'}" type="button">Produk</router-link> 
+          <router-link :to="{ name: 'Produk'}" type="button">Product</router-link> 
         </li> 
         <li>
-          <router-link :to="{ name: 'Contact'}" type="button">Kontak</router-link> 
+          <router-link :to="{ name: 'Contact'}" type="button">Contact</router-link> 
         </li>
         <li>
           <router-link :to="{ name: 'Merk'}" type="button">Brand</router-link> 
         </li>
         <li>
-          <router-link :to="{ name: 'Kategori'}" type="button">Kategori</router-link> 
+          <router-link :to="{ name: 'Kategori'}" type="button">Category</router-link> 
         </li>
         <li>
           <router-link :to="{ name: 'Profile'}" type="button">Profile</router-link>

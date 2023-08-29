@@ -2,7 +2,7 @@
   <section class="h-screen bg-gray-100 py-12 sm:py-16 lg:py-20">
 <div class="mx-auto px-4 sm:px-6 lg:px-8">
   <div class="flex items-center justify-center">
-    <h1 class="text-2xl font-semibold text-gray-900">Your Cart</h1>
+    <h1 class="text-2xl font-semibold text-blue-600">Your Cart</h1>
   </div>
 
   <div class="mx-auto mt-8 max-w-2xl md:mt-12">
@@ -12,7 +12,7 @@
           <ul class="-my-8">
             <li v-for="cart in getCart" :key="cart.cart_id" class="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
               <div class="shrink-0">
-                <img class="h-24 w-24 max-w-full rounded-lg object-cover" src="../assets/hoodie1.png" alt="" />
+                <img class="h-24 w-24 max-w-full rounded-lg object-cover" src="../assets/hoodie.png" alt="" />
               </div>
 
               <div class="relative flex flex-1 flex-col justify-between">
@@ -80,15 +80,6 @@
   </div>
 </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>

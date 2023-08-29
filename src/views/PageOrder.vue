@@ -2,7 +2,7 @@
     <div class="pt-20 bg-amber-50">
         <div class="container mx-auto px-4">
           <div class="message text-center">
-            <h1 class="text-3xl font-bold pt-10">Terimakasih Telah Memesan di Toko Kami</h1>
+            <h1 class="text-3xl font-bold pt-10">Terimakasih Telah Memesan di Toko Scandiez</h1>
             <p>Kode Pemesanan : {{ getOrder.code }}</p>
             <p class="italic">
               Terimakasih atas kepercayaan {{ getOrder.user.name }} kepada ArtisanAlley

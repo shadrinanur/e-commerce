@@ -7,7 +7,7 @@
                     <ol role="list" class="flex items-center">
                         <li class="text-left">
                             <div class="-m-1">
-                                <a href="#"
+                                <a href="/beranda"
                                     class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800">
                                     Home </a>
                             </div>
@@ -17,7 +17,7 @@
                             <div class="flex items-center">
                                 <span class="mx-2 text-gray-400">/</span>
                                 <div class="-m-1">
-                                    <a href="#"
+                                    <a href="/produk"
                                         class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800">
                                         Products </a>
                                 </div>
@@ -28,9 +28,9 @@
                             <div class="flex items-center">
                                 <span class="mx-2 text-gray-400">/</span>
                                 <div class="-m-1">
-                                    <a href="#"
+                                    <a href="/contact"
                                         class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
-                                        aria-current="page"> {{ product.title }} </a>
+                                        aria-current="page">Contact</a>
                                 </div>
                             </div>
                         </li>
@@ -53,19 +53,19 @@
                                     <button type="button"
                                         class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-900 text-center">
                                         <img class="h-full w-full object-cover"
-                                            src="../assets/gambar4.jpg" 
+                                            src="../assets/hoodie1.png" 
                                             alt="" />
                                     </button>
                                     <button type="button"
                                         class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
                                         <img class="h-full w-full object-cover"
-                                            src="../assets/gambar6.jpg"
+                                            src="../assets/hoodie.png"
                                             alt="" />
                                     </button>
                                     <button type="button"
                                         class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
                                         <img class="h-full w-full object-cover"
-                                            src="../assets//gambar7.jpg"
+                                            src="../assets//hoodie2.png"
                                             alt="" />
                                     </button>
                                 </div>
@@ -140,7 +140,7 @@
                         <div
                             class="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
                             <div class="flex items-end">
-                                <h1 class="text-3xl font-bold">${{ product.base_price * counter}}</h1>
+                                <h1 class="text-3xl font-bold"> $ {{ product.base_price * counter}}</h1>
                             
                             </div>
                             <div v-if="token">
@@ -201,12 +201,10 @@
                             <nav class="flex gap-4">
                                 <a href="#" title=""
                                     class="border-b-2 border-gray-900 py-4 text-sm font-medium text-gray-900 hover:border-gray-400 hover:text-gray-800">
-                                    Description </a>
-
-
-                            </nav>
+                                    Description </a> 
+                            </nav>It is an oversized women's hoodie that is suitable for use at any time.
+It has many beautiful colors. It 's comfortable to wear everyday.
                         </div>
-
                         <div class="mt-8 flow-root sm:mt-12 flex justify-stretch">
                             <p class="mt-4 justify-normal">{{ product.metaTitle }}</p>
                         </div>

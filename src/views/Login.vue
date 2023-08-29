@@ -36,10 +36,10 @@
                        <a href="#"
                            class="flex cursor-pointer items-center gap-2 text-indigo-500 no-underline hover:text-indigo-500">
                            <span
-                               class="flex-shrink-0 text-3xl font-black lowercase tracking-tight opacity-100">login</span>
+                               class="flex-shrink-0 text-3xl font-black lowercase tracking-tight opacity-100">Login</span>
                        </a>
                    </div>
-                   <!-- /Logo -->
+                   <!-- /Logo --> 
                    <h4 class="mb-2 font-medium text-gray-700 xl:text-xl">Welcome!</h4>
                    <p class="mb-6 text-gray-500">Please sign-in to access your account</p>
 
@@ -48,7 +48,7 @@
                            <label for="email" class="mb-2 inline-block text-xs font-medium uppercase text-gray-700">Email</label>
                            <input type="text"
                                class="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow"
-                               id="email" v-model="email" placeholder="Enter your email" autofocus="" />
+                               id="email" v-model="email" placeholder="Enter your email" />
                        </div>
                        <div class="mb-4">
                            <div class="flex justify-between">
@@ -62,7 +62,7 @@
                            <div class="relative flex w-full flex-wrap items-stretch">
                                <input type="password" id="password"
                                    class="relative block flex-auto cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow"
-                                   v-model="password" placeholder="············" />
+                                   v-model="password" placeholder=". . . . . ." />
                            </div>
                        </div>
                        <div class="mb-4">
@@ -83,7 +83,7 @@
                    </form>
 
                    <p class="mb-4 text-center">
-                       New on piwwStore?
+                       New on candiezStore?
                        <a href="/register" class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500"> Create an
                            account </a>
                    </p>
@@ -114,10 +114,12 @@ export default {
                 email: this.email,
                 password: this.password,
             };
+
             const success = await this.login(credentials);
+
             if (success && this.isAuthenticated) {
                 // Redirect to the desired route on successful login
-                this.$router.push('/');
+                this.$router.push('/beranda');
             } else {
                 // Handle login error
                 if (this.loginError) {
